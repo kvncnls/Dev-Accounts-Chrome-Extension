@@ -11,20 +11,12 @@ function loadVersion() {
       versionUI.innerHTML = `
       Version: ${data.version}
       `;
-      let contentUI = document.querySelector(".modal-content p");
-      contentUI.innerHTML = `
-      Status: 200
-      `;
     })
     .catch(() => {
-      let versionUI = document.getElementById("version");
-      versionUI.innerHTML = `
-      JSON file not found.
-      `;
-      let contentUI = document.querySelector(".modal-content p");
-      contentUI.innerHTML = `
-      Status: 404
-      `;
+      let contentUI = document.querySelector(".modal-content");
+      contentUI.innerHTML = `<p>
+      Status: 404 - Please don't read my source code...
+      </p>`;
     });
 }
 
